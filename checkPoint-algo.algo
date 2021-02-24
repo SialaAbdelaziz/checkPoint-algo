@@ -1,0 +1,23 @@
+ALGORITHM algorithm_name
+VAR
+    input : STRING;
+    car : CHAR;
+    count1 : INTEGER :=0;
+    count2 : INTEGER :=0;
+    count3 : INTEGER :=0;
+BEGIN
+Read (input)
+    REPEAT
+        IF (car <> " ") THEN
+            count1 := count1 + 1;
+        ELSE
+            count2 := count2 + 1;
+        END_IF
+        IF (car = "a" or car = "A" or car = "e" or car = "E" or car = "i" or car = "I" or car = "o" or car = "O" or car = "u" or car = "U" or car = "y" or car = "Y" or ) THEN
+            count3 := count3 + 1;
+        END_IF
+    UNTIL (car = ".")
+    Write ( "The length of the sentence is" + count1)
+    Write ("The number of words in the sentence is" + count2)
+    Write ("The number of vowels in the sentence is" + count3)
+END
